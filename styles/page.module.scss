@@ -1,0 +1,162 @@
+:root {
+    --bg: #f9fafb; /* gray-50 */
+    --text: #111827; /* gray-900 */
+    --muted: #4b5563; /* gray-600 */
+    --border: #d1d5db; /* gray-300 */
+    --ring: #5850ec; /* roxo principal */
+    --ring-hover: #4338ca; /* roxo escuro */
+    --white: #ffffff;
+    --focus: rgba(88, 80, 236, 0.2);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+    --radius: 0.5rem;
+}
+
+html,
+body,
+#__next {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background: var(--bg);
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+        Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza verticalmente */
+    padding: 3rem 1.5rem; /* py-12 sm:px-6 lg:px-8 */
+}
+
+.centerBox {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 28rem; /* 448px ~ sm:max-w-md */
+}
+
+.header {
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    height: 3rem; /* h-12 */
+    width: auto;
+    margin: 0 auto 1rem;
+}
+
+.title {
+    margin-top: 1.5rem;
+    font-size: 1.875rem; /* text-3xl */
+    line-height: 2.25rem;
+    font-weight: 800; /* extrabold */
+    color: var(--text);
+}
+
+.subtitle {
+    margin-top: 0.5rem;
+    color: var(--muted);
+}
+
+.linkPrimary,
+.linkPrimarySmall {
+    color: var(--ring);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.linkPrimary:hover,
+.linkPrimarySmall:hover {
+    color: var(--ring-hover);
+    text-decoration: underline;
+}
+
+.linkPrimarySmall {
+    font-size: 0.875rem; /* text-sm */
+}
+
+.card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-top: 30px;
+}
+
+.form {
+    display: grid;
+    gap: 1.5rem; /* space-y-6 */
+}
+
+.field {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem 0.75rem; /* py-2 px-3 */
+    border: 1px solid var(--border);
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+    outline: none;
+    transition: box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.input::placeholder {
+    color: #9ca3af; /* placeholder-gray-400 */
+}
+
+.input:focus {
+    border-color: var(--ring);
+    box-shadow: 0 0 0 3px var(--focus);
+}
+
+.rowRight {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonPrimary {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    border: 1px solid transparent;
+    border-radius: 0.375rem;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 600;
+    color: #fff;
+    background: var(--ring);
+    cursor: pointer;
+    transition: background-color 200ms ease, box-shadow 150ms ease;
+    box-shadow: var(--shadow);
+}
+
+.buttonPrimary:hover {
+    background: var(--ring-hover);
+}
+
+.buttonPrimary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--focus);
+}
+
+/* Caso você já use essa classe no projeto */
+.mask-user-input {
+    /* Exemplo: normaliza espaçamento/dígitos, ajuste conforme sua máscara real */
+    font-variant-numeric: tabular-nums;
+}
