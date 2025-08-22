@@ -9,7 +9,7 @@ export default function LogoutButton(
     return (
         <button
             {...props}
-            onClick={() => signOut({ callbackUrl: '/' })} // 👈 redireciona para /login após logout
+            onClick={() => signOut({ callbackUrl: '/' })}
             className="px-4 py-2 bg-red-500 text-white rounded"
         >
             Sair

@@ -160,3 +160,17 @@ body {
     /* Exemplo: normaliza espaçamento/dígitos, ajuste conforme sua máscara real */
     font-variant-numeric: tabular-nums;
 }
+
+.buttonGoogle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #fff;
+    color: #1f2937;
+    border: 1px solid #e5e7eb;
+}
+
+.buttonGoogle:hover {
+    background: #f9fafb;
+}
